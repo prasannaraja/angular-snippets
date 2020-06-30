@@ -1,5 +1,4 @@
-{
-  "Employees": [
+[
     {
       "userId": "rirani",
       "jobTitle": "Developer",
@@ -64,4 +63,3 @@
       "emailAddress": "tin.jonson@learningcontainer.com"
     }
   ]
-}
