@@ -1,0 +1,19 @@
+<p>todo-list works!</p>
+<style>
+    .is-done {
+        text-decoration: line-through;
+    }
+</style>
+
+<div>
+    <input type="text" #toDoItem name="toDoItem">
+    <button type="button" (click)="add(toDoItem.value)">Add</button>
+</div>
+<div>
+    <p class="task-counter">{{remainingToDoItems}} remaining out of {{items.length}} tasks</p>
+</div>
+<div>
+    <ul>
+        <li (click)="toggleItem(item)" [ngClass]="item.isDone == true ? 'is-done': ''" *ngFor="let item of items"> {{ item.name }} </li>
+    </ul>
+</div>
