@@ -96,6 +96,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _save_to_json_save_to_json_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./save-to-json/save-to-json.component */
     "./src/app/save-to-json/save-to-json.component.ts");
+    /* harmony import */
+
+
+    var _nasa_apod_nasa_apod_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ./nasa-apod/nasa-apod.component */
+    "./src/app/nasa-apod/nasa-apod.component.ts");
 
     var routes = [{
       path: 'home',
@@ -112,6 +118,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'json',
       component: _save_to_json_save_to_json_component__WEBPACK_IMPORTED_MODULE_6__["SaveToJsonComponent"]
+    }, {
+      path: 'apod',
+      component: _nasa_apod_nasa_apod_component__WEBPACK_IMPORTED_MODULE_7__["NasaApodComponent"]
     }];
 
     var AppRoutingModule = function AppRoutingModule() {
@@ -455,6 +464,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _save_to_json_save_to_json_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! ./save-to-json/save-to-json.component */
     "./src/app/save-to-json/save-to-json.component.ts");
+    /* harmony import */
+
+
+    var _nasa_apod_nasa_apod_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ./nasa-apod/nasa-apod.component */
+    "./src/app/nasa-apod/nasa-apod.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
@@ -474,7 +489,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     (function () {
       (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"], _popup_popup_component__WEBPACK_IMPORTED_MODULE_9__["PopupComponent"], _todo_list_todo_list_component__WEBPACK_IMPORTED_MODULE_10__["TodoListComponent"], _save_to_json_save_to_json_component__WEBPACK_IMPORTED_MODULE_11__["SaveToJsonComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"], _popup_popup_component__WEBPACK_IMPORTED_MODULE_9__["PopupComponent"], _todo_list_todo_list_component__WEBPACK_IMPORTED_MODULE_10__["TodoListComponent"], _save_to_json_save_to_json_component__WEBPACK_IMPORTED_MODULE_11__["SaveToJsonComponent"], _nasa_apod_nasa_apod_component__WEBPACK_IMPORTED_MODULE_12__["NasaApodComponent"]],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"]]
       });
     })();
@@ -485,7 +500,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
         args: [{
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"], _popup_popup_component__WEBPACK_IMPORTED_MODULE_9__["PopupComponent"], _todo_list_todo_list_component__WEBPACK_IMPORTED_MODULE_10__["TodoListComponent"], _save_to_json_save_to_json_component__WEBPACK_IMPORTED_MODULE_11__["SaveToJsonComponent"]],
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _home_home_component__WEBPACK_IMPORTED_MODULE_4__["HomeComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_5__["DashboardComponent"], _popup_popup_component__WEBPACK_IMPORTED_MODULE_9__["PopupComponent"], _todo_list_todo_list_component__WEBPACK_IMPORTED_MODULE_10__["TodoListComponent"], _save_to_json_save_to_json_component__WEBPACK_IMPORTED_MODULE_11__["SaveToJsonComponent"], _nasa_apod_nasa_apod_component__WEBPACK_IMPORTED_MODULE_12__["NasaApodComponent"]],
           imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__["NgbModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_8__["ReactiveFormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"]],
           providers: [],
           bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
@@ -1026,6 +1041,85 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           selector: 'app-home',
           templateUrl: './home.component.html',
           styleUrls: ['./home.component.css']
+        }]
+      }], function () {
+        return [];
+      }, null);
+    })();
+    /***/
+
+  },
+
+  /***/
+  "./src/app/nasa-apod/nasa-apod.component.ts":
+  /*!**************************************************!*\
+    !*** ./src/app/nasa-apod/nasa-apod.component.ts ***!
+    \**************************************************/
+
+  /*! exports provided: NasaApodComponent */
+
+  /***/
+  function srcAppNasaApodNasaApodComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NasaApodComponent", function () {
+      return NasaApodComponent;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+    var NasaApodComponent =
+    /*#__PURE__*/
+    function () {
+      function NasaApodComponent() {
+        _classCallCheck(this, NasaApodComponent);
+      }
+
+      _createClass(NasaApodComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }]);
+
+      return NasaApodComponent;
+    }();
+
+    NasaApodComponent.ɵfac = function NasaApodComponent_Factory(t) {
+      return new (t || NasaApodComponent)();
+    };
+
+    NasaApodComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      type: NasaApodComponent,
+      selectors: [["app-nasa-apod"]],
+      decls: 2,
+      vars: 0,
+      template: function NasaApodComponent_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "nasa-apod works!");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      },
+      styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL25hc2EtYXBvZC9uYXNhLWFwb2QuY29tcG9uZW50LmNzcyJ9 */"]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NasaApodComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+          selector: 'app-nasa-apod',
+          templateUrl: './nasa-apod.component.html',
+          styleUrls: ['./nasa-apod.component.css']
         }]
       }], function () {
         return [];

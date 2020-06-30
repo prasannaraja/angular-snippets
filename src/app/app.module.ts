@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PopupComponent } from './popup/popup.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { SaveToJsonComponent } from './save-to-json/save-to-json.component';
+import { NasaApodComponent } from './nasa-apod/nasa-apod.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SaveToJsonComponent } from './save-to-json/save-to-json.component';
     DashboardComponent,
     PopupComponent,
     TodoListComponent,
-    SaveToJsonComponent
+    SaveToJsonComponent,
+    NasaApodComponent
   ],
   imports: [
     BrowserModule,
