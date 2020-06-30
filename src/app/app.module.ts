@@ -7,9 +7,12 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PopupComponent } from './popup/popup.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { SaveToJsonComponent } from './save-to-json/save-to-json.component';
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     HomeComponent,
     DashboardComponent,
     PopupComponent,
-    TodoListComponent
+    TodoListComponent,
+    SaveToJsonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

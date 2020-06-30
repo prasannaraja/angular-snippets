@@ -1,0 +1,44 @@
+<!--another grid-->
+<div>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Name</th>
+        <th scope="col">Code</th>
+        <th scope="col">Region</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let employee of employees.Employees">
+        <th scope="row">{{ employee.userId }}</th>
+        <td>{{ employee.jobTitle }}</td>
+        <td>{{ employee.firstName + ' ' + employee.lastName }}</td>
+        <td>{{ employee.employeeCode }}</td>
+        <td>{{ employee.region }}</td>
+        <td>{{ employee.phoneNumber }}</td>
+        <td>{{ employee.emailAddress }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!--Paging-->
+<div class="d-flex justify-content-between p-2">
+    <ngb-pagination 
+      [collectionSize]="collectionSize" 
+      [(page)]="page" 
+      [pageSize]="pageSize">
+    </ngb-pagination>
+  
+    <select class="custom-select" style="width: auto" 
+    [(ngModel)]="pageSize">
+      <option [ngValue]="2">2 items per page</option>
+      <option [ngValue]="4">4 items per page</option>
+      <option [ngValue]="6">6 items per page</option>
+    </select>
+  </div>
+  

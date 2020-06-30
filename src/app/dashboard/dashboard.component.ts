@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 interface Country {
   id?: number;
   name: string;
@@ -109,7 +108,8 @@ export class DashboardComponent implements OnInit {
   get countries(): Country[] {
     return COUNTRIES
       .map((country, i) => ({id: i + 1, ...country}))
-      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+      .slice((this.page - 1) * this.pageSize, 
+      (this.page - 1) * this.pageSize + this.pageSize);
   }
 
 }
