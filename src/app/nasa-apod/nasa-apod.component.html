@@ -1,20 +1,13 @@
 <div *ngIf="apod">
     <div *ngIf="apod.media_type=='image'" class="row">
         <div class="col-12">
-            <img src={{apod.hdurl}} alt={{apod.title}} />
+            <img src={{apod.url}} alt={{apod.title}} />
         </div>
     </div>
-    <div *ngIf="apod.media_type!='image'" class="row">
+    <div *ngIf="apod.media_type=='video'" class="row">
         <div class="col-12">
-            <iframe
-              title="space-video"
-              src={apod.url}
-              frameBorder="0"
-              gesture="media"
-              allow="encrypted-media"
-              allowFullScreen
-              className="photo"
-            ></iframe>
+            <p>It's a video</p>
+            <pre>{{apod.url|json}}</pre>
         </div>
     </div>
     <br />

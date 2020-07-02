@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NasaApiService } from '../services/nasa-api.service';
-import { observable } from 'rxjs';
-
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { INasaAPOD } from '../models/nasaAPOD';
 
 @Component({
   selector: 'app-nasa-apod',
@@ -9,15 +9,20 @@ import { observable } from 'rxjs';
   styleUrls: ['./nasa-apod.component.css']
 })
 export class NasaApodComponent implements OnInit {
-  public apod: any;
-  constructor(private nasaApi: NasaApiService) { }
+  public apod: INasaAPOD;
+  public safeUrl: any;
+  constructor(private nasaApi: NasaApiService,private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.nasaApi.getAPOD()
       .subscribe(data => {
-        this.apod = data;
+        this.apod = data
         console.log(data);
-     })
+      })  
   }
 
+  getSafeUrl(url:string) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);    
+  }
+  
 }

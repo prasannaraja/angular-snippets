@@ -14,6 +14,7 @@ import { PopupComponent } from './popup/popup.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { SaveToJsonComponent } from './save-to-json/save-to-json.component';
 import { NasaApodComponent } from './nasa-apod/nasa-apod.component';
+import { SafePipe } from './custom-pipe/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NasaApodComponent } from './nasa-apod/nasa-apod.component';
     PopupComponent,
     TodoListComponent,
     SaveToJsonComponent,
-    NasaApodComponent
+    NasaApodComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,

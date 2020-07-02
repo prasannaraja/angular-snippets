@@ -14,7 +14,7 @@ export class NasaApiService {
   
   constructor(private httpService: HttpClient) { }
 
-  getAPOD(): Observable<INasaAPOD[]> {
-    return this.httpService.get<INasaAPOD[]>(this._nasa_apod_url);
+  getAPOD(): Observable<INasaAPOD> {
+    return this.httpService.get<INasaAPOD>(this._nasa_apod_url);
   }
 }
